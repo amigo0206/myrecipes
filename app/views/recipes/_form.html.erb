@@ -18,12 +18,12 @@
     </div>
     
     <span class="picture">
-      <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
+      <%= f.file_field :picture, accept: 'image/jpg,image/gif,image/png' %>
     </span>
+    <br>
     
-      <%= f.submit(@recipe.new_record? ? 'Create Recipe' : 'Edit Recipe', class: "btn btn-success") %>
+    <%= f.submit(@recipe.new_record? ? 'Create Recipe' : 'Edit Recipe', class: "btn btn-success") %>
     <% end %>
-    </div>
   </div>
 </div>
 
