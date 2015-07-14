@@ -1,6 +1,11 @@
 <header class="navbar navbar-inverse navbar-fixed-top">
   <div class="container">
-    <%= link_to "Cuisine Recipes", root_path, class: "btn btn-lg btn-success", id: "logo" %>
+    <% if logged_in? %>
+        <%= link_to "Cuisine Recipes", recipes_path, class: "btn btn-lg btn-success", id: "logo" %>
+    <% else %>
+       <%= link_to "Cuisine Recipes", root_path, class: "btn btn-lg btn-success", id: "logo" %>
+    <% end %>
+    
     <ul class="nav_ul_item">
       <li class="dropdown">
           <%= link_to '#', class: "btn btn-default btn-warning dropdown-toggle", "data-toggle" => "dropdown" do %>
@@ -47,8 +52,8 @@
       </div>
       <ul class="nav-item">
         <li class="dropdown">
-          <%= link_to '#', class: "btn btn-default btn-danger dropdown-toggle", "data-toggle" => "dropdown" do %>
-            <%= current_user.chefname %> <b class="caret"></b>
+          <%= link_to '#', class: "btn btn-success dropdown-toggle", "data-toggle" => "dropdown" do %>
+            User Options <b class="caret"></b>
           <% end %>
           <ul class="dropdown-menu">
             <li><%= link_to "View Profile", chef_path(current_user) %></li>
@@ -58,9 +63,19 @@
           </ul>
         </li>
       </ul>
+      
+      <div class='pull-right'>
+        <div class="pull-left" style="padding-top:10px;">
+          <%= link_to gravatar_for(current_user, size:50) %>
+        </div>
+        <div style="width:90px;padding-top:10px;padding-left:10px;float:right;">
+          <small style="color:white;">Logged in as:<br/> <%= current_user.chefname %> </small>
+        </div>
+      </div>
+      
     <% else %>
       <div class="nav-item navbar-right">
-        <%= link_to "Login", login_path, class: "btn btn-default btn-warning" %>
+        <%= link_to "Login", login_path, class: "btn btn-warning" %>
       </div
     <% end %> 
   </div>
