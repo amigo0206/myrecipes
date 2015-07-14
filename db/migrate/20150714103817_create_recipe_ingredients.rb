@@ -5,4 +5,3 @@ class CreateRecipeIngredients < ActiveRecord::Migration
     end
   end
 end
-
