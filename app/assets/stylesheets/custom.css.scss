@@ -41,7 +41,7 @@ body {
 }
 
 .jumbotron {
-  background-image: url("http://1.bp.blogspot.com/-VaQjX5X0Y0M/UpPsQcOG5YI/AAAAAAAAAhU/u7BNSg7rAEo/s1600/Rubaiyat+Acci%25C3%25B3n+de+Gracias+4+-+bj.jpg");
+  background-image: image-url("food.jpg");
   background-size: cover;
   height: 100%;
 }
@@ -117,5 +117,10 @@ input {
   height: auto !important;
 }
 
+@media (max-width: 560px) {
+  .navbar .nav_ul_item .dropdown-menu .dropdown {display:none; width:80px;}
+  .navbar .nav .nav-item .dropdown> li a:hover { background-color:transparent}
+  .nav .pull-right > li {display: table;clear:both};
+}
 
 
