@@ -13,11 +13,11 @@
     <%= f.text_field :summary, class: 'form-control' %>
     </div>
     <div class="form-group">  
-    <%= f.label :description %>
+    <%= f.label :Directions %>
     <%= f.text_area :description, rows: 10, class: 'form-control' %>
     </div>
     
-    <strong>Styles:</strong>
+    <strong>Cuisine:</strong>
     <%= f.collection_check_boxes :style_ids, Style.all, :id, :name do |cb| %>
       <% cb.label(class: "checkbox-inline input_checkbox") {cb.check_box(class: "checkbox") + cb.text} %>
     <% end %>

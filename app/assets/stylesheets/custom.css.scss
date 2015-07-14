@@ -8,12 +8,12 @@ body {
 #logo {
   margin-top: 10px;
   margin-bottom: 10px;
-  margin-right: 10px;
+  margin-right: 20px;
   float: left;
   font-size: 2em;
   color: #fff;
   text-transform: uppercase;
-  letter-spacing: -1px;
+  letter-spacing: -2px;
   padding-top: 9px;
   font-weight: bold;
 }
@@ -29,10 +29,27 @@ body {
   margin-top: 20px;
 }
 
+.navbar-right {
+  margin-right: 0px;
+  padding-right: 0px;
+}
+
 .nav_ul_item {
   padding-left: 25px;
   float: left;
   margin-top: 20px;
+}
+
+.jumbotron {
+  background-image: url("http://1.bp.blogspot.com/-VaQjX5X0Y0M/UpPsQcOG5YI/AAAAAAAAAhU/u7BNSg7rAEo/s1600/Rubaiyat+Acci%25C3%25B3n+de+Gracias+4+-+bj.jpg");
+  background-size: cover;
+  height: 100%;
+}
+
+.jumbotron {
+  h1, h2 {
+  color: white;
+  }
 }
 
 .center {
@@ -64,7 +81,7 @@ h2 {
 }
 
 .footer {
-  margin-top: 15px;
+  margin-top: 25px;
   padding-top: 10px;
   border-top: 1px solid #eaeaea;
   color: #777;
